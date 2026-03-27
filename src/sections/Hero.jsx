@@ -1,3 +1,6 @@
+import logo from "../assets/Logo.png";
+import { motion } from "framer-motion";
+
 export default function Hero() {
   return (
     <section className="h-screen bg-white flex items-center px-8">
