@@ -34,14 +34,32 @@ export default function Hero() {
         <div className="relative flex items-center justify-center">
 
           {/* LOGO / ESPAÇO INTERATIVO */}
-          <div className="w-72 h-72 rounded-full border border-gray-300 flex items-center justify-center text-center text-gray-500">
-            LOGO DIVINA CARNE
-          </div>
+          <motion.div
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="relative flex items-center justify-center"
+>
+  <motion.img
+    src={logo}
+    alt="Divina Carne"
+    className="w-64 h-64 object-contain"
+    whileHover={{ scale: 1.08 }}
+    animate={{ scale: [1, 1.03, 1] }}
+    transition={{
+      duration: 3,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+  />
+</motion.div>
 
           {/* SELO */}
-          <div className="absolute bottom-0 right-0 bg-green-600 text-white px-4 py-2 rounded-full text-sm shadow-md">
-            Green Quality
-          </div>
+          <<img
+  src={selo}
+  alt="Green Quality"
+  className="absolute bottom-0 right-0 w-20"
+/>
 
         </div>
 
