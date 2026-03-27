@@ -37,7 +37,7 @@ export default function Navbar() {
             VALORES
           </a>
           <a href="#sig" className="hover:text-red-700 transition">
-            SIG
+            Sistema Integrado de Gestão (SIG)
           </a>
         </div>
 
