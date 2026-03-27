@@ -11,13 +11,17 @@ export default function Hero() {
         {/* ESQUERDA */}
         <div className="flex flex-col gap-6">
 
-          <h1 className="text-5xl font-bold leading-tight">
-            Alimentando o mundo hoje.
-            <br />
-            Preservando o amanhã.
-          </h1>
+          <div className="max-w-xl">
+            <h1 className="text-5xl font-bold leading-tight">
+              Alimentando o mundo hoje.
+            </h1>
 
-          <div className="flex gap-4 mt-4">
+            <h1 className="text-5xl font-bold leading-tight mt-2">
+              Preservando o amanhã.
+            </h1>
+          </div>
+
+          <div className="flex gap-4 mt-6">
             
             <button className="bg-[#AA0106] text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition">
               NOS CONHEÇA
@@ -34,32 +38,31 @@ export default function Hero() {
         {/* DIREITA */}
         <div className="relative flex items-center justify-center">
 
-          {/* LOGO */}
+          {/* LOGO GRANDE */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
+            initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative flex items-center justify-center"
           >
             <motion.img
               src={logo}
               alt="Divina Carne"
-              className="w-64 h-64 object-contain"
-              whileHover={{ scale: 1.08 }}
-              animate={{ scale: [1, 1.03, 1] }}
+              className="w-[420px] object-contain"
+              whileHover={{ scale: 1.05 }}
+              animate={{ scale: [1, 1.02, 1] }}
               transition={{
-                duration: 3,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
             />
           </motion.div>
 
-          {/* SELO */}
+          {/* SELO MENOR */}
           <img
             src={selo}
             alt="Green Quality"
-            className="absolute bottom-0 right-0 w-20"
+            className="absolute bottom-2 right-6 w-16 opacity-90"
           />
 
         </div>
