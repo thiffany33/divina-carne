@@ -1,4 +1,5 @@
 import logo from "../assets/Logo.png";
+import selo from "../assets/GreenQuality.png";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -33,33 +34,33 @@ export default function Hero() {
         {/* DIREITA */}
         <div className="relative flex items-center justify-center">
 
-          {/* LOGO / ESPAÇO INTERATIVO */}
+          {/* LOGO */}
           <motion.div
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1 }}
-  className="relative flex items-center justify-center"
->
-  <motion.img
-    src={logo}
-    alt="Divina Carne"
-    className="w-64 h-64 object-contain"
-    whileHover={{ scale: 1.08 }}
-    animate={{ scale: [1, 1.03, 1] }}
-    transition={{
-      duration: 3,
-      repeat: Infinity,
-      ease: "easeInOut",
-    }}
-  />
-</motion.div>
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+            className="relative flex items-center justify-center"
+          >
+            <motion.img
+              src={logo}
+              alt="Divina Carne"
+              className="w-64 h-64 object-contain"
+              whileHover={{ scale: 1.08 }}
+              animate={{ scale: [1, 1.03, 1] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+          </motion.div>
 
           {/* SELO */}
-          <<img
-  src={selo}
-  alt="Green Quality"
-  className="absolute bottom-0 right-0 w-20"
-/>
+          <img
+            src={selo}
+            alt="Green Quality"
+            className="absolute bottom-0 right-0 w-20"
+          />
 
         </div>
 
