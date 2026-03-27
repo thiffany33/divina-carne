@@ -36,9 +36,9 @@ export default function Hero() {
         </div>
 
         {/* DIREITA */}
-        <div className="relative flex items-center justify-center">
+        <div className="flex items-center justify-center gap-6">
 
-          {/* LOGO GRANDE */}
+          {/* LOGO */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -47,22 +47,25 @@ export default function Hero() {
             <motion.img
               src={logo}
               alt="Divina Carne"
-              className="w-[420px] object-contain"
+              className="w-[1500px] object-contain"
               whileHover={{ scale: 1.05 }}
-              animate={{ scale: [1, 1.02, 1] }}
+              animate={{ scale: [1, 0.95, 1] }}
               transition={{
-                duration: 4,
+                duration: 2.5,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
             />
           </motion.div>
 
-          {/* SELO MENOR */}
-          <img
+          {/* SELO */}
+          <motion.img
             src={selo}
             alt="Green Quality"
-            className="absolute bottom-2 right-6 w-16 opacity-90"
+            className="w-[110px] object-contain"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
           />
 
         </div>
