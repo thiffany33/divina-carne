@@ -73,35 +73,24 @@ export default function Hero() {
         {/* DIREITA */}
         <div className="flex items-center justify-center gap-6">
 
-          {/* LOGO + BRILHO */}
+          {/* LOGO (respiração) */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative"
           >
-
-            <img
+            <motion.img
               src={logo}
               alt="Divina Carne"
               className="w-[620px] object-contain"
-            />
-
-            {/* BRILHO */}
-            <motion.div
-              className="absolute top-0 left-[-100%] w-full h-full pointer-events-none"
-              style={{
-                background:
-                  "linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent)",
-              }}
-              animate={{ left: ["-100%", "100%"] }}
+              whileHover={{ scale: 1.05 }}
+              animate={{ scale: [1, 1.03, 1] }}
               transition={{
                 duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
             />
-
           </motion.div>
 
           {/* SELO */}
