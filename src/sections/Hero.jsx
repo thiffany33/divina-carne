@@ -34,7 +34,7 @@ export default function Hero() {
               }}
               transition={{ duration: 0.6 }}
             >
-              Alimentando o mundo hoje.
+              <span className="text-[#AA0106]">Alimentando</span> o mundo hoje.
             </motion.h1>
 
             <motion.h1
@@ -45,7 +45,7 @@ export default function Hero() {
               }}
               transition={{ duration: 0.6 }}
             >
-              Preservando o amanhã.
+              <span className="text-[#AA0106]">Preservando</span> o amanhã.
             </motion.h1>
 
           </motion.div>
