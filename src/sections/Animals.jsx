@@ -5,171 +5,118 @@ import suino from "../assets/animals/suino.png";
 import aves from "../assets/animals/aves.png";
 
 export default function Animals() {
+  const [open, setOpen] = useState(null);
 
-  const [active, setActive] = useState(null);
+  const toggle = (item) => {
+    setOpen(open === item ? null : item);
+  };
 
   return (
-    <section className="min-h-screen bg-white px-8 py-20">
+    <section className="bg-white px-8 py-20">
 
       <div className="max-w-7xl mx-auto">
 
         {/* TÍTULO */}
-        <div className="mb-16">
-          <h2 className="text-4xl font-bold mb-4">
+        <div className="mb-12">
+          <p className="text-sm text-[#AA0106] uppercase tracking-widest mb-2">
             Produção com excelência
+          </p>
+
+          <h2 className="text-4xl font-bold mb-4">
+            Nossos animais
           </h2>
 
           <p className="text-gray-600 max-w-xl">
-            Garantimos qualidade e sustentabilidade em toda a nossa cadeia produtiva.
+            Garantimos bem-estar animal, qualidade, rastreabilidade e segurança alimentar em todas as etapas da produção.
           </p>
         </div>
 
-        {/* GRID */}
+        {/* CARDS */}
+        <div className="grid grid-cols-3 gap-6 mb-8">
+
+          {[{
+            key: "bovino",
+            title: "Bovinos",
+            img: bovino,
+            desc: "Qualidade e rastreabilidade em cada etapa."
+          },
+          {
+            key: "suino",
+            title: "Suínos",
+            img: suino,
+            desc: "Processos controlados para máxima segurança."
+          },
+          {
+            key: "aves",
+            title: "Aves",
+            img: aves,
+            desc: "Bem-estar, qualidade e segurança do início ao fim."
+          }].map((item) => (
+
+            <div key={item.key} className="relative h-[260px] rounded-2xl overflow-hidden">
+
+              <img
+                src={item.img}
+                className="w-full h-full object-cover"
+              />
+
+              <div className="absolute inset-0 bg-black/40" />
+
+              <div className="absolute bottom-6 left-6 text-white">
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="text-sm opacity-80">{item.desc}</p>
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+        {/* SABER MAIS */}
         <div className="grid grid-cols-3 gap-6">
 
-          {/* BOVINO */}
-          <div
-            className={`relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ${
-              active === "bovino" ? "col-span-3 h-[500px]" : "h-[320px]"
-            }`}
-          >
+          {["bovino", "suino", "aves"].map((item) => (
 
-            <img
-              src={bovino}
-              alt="Bovinos"
-              className="w-full h-full object-cover"
-            />
+            <div key={item} className="border rounded-xl overflow-hidden">
 
-            <div className="absolute inset-0 bg-black/40" />
-
-            <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-xl font-semibold mb-2">Bovinos</h3>
-
+              {/* HEADER */}
               <button
-                onClick={() =>
-                  setActive(active === "bovino" ? null : "bovino")
-                }
-                className="text-sm underline"
+                onClick={() => toggle(item)}
+                className="w-full flex justify-between items-center p-4 text-left"
               >
-                {active === "bovino" ? "Fechar" : "Saiba mais"}
+                <span>Saber mais</span>
+                <span>{open === item ? "▲" : "▼"}</span>
               </button>
+
+              {/* CONTEÚDO */}
+              {open === item && (
+                <div className="p-6 border-t">
+
+                  <h3 className="font-bold text-lg mb-3 capitalize">
+                    {item}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {item === "bovino" &&
+                      "Na Divina Carne, a produção de bovinos é conduzida com um rigor absoluto, desde a criação até à distribuição final. Garantimos o bem-estar animal através de práticas responsáveis, com ambientes controlados e alimentação adequada. Todo o processo é monitorizado de forma contínua, assegurando elevados padrões de qualidade e segurança alimentar. A rastreabilidade permite acompanhar cada lote com precisão, garantindo total transparência ao longo da cadeia produtiva. O resultado é um produto consistente, seguro e de excelência, que chega ao consumidor com confiança e qualidade garantida."
+                    }
+
+                    {item === "suino" &&
+                      "A produção de suínos na Divina Carne assenta em processos eficientes, sustentáveis e altamente controlados. Priorizamos o bem-estar animal, assegurando condições adequadas de criação e acompanhamento técnico em todas as fases. Aplicamos rigorosos critérios de qualidade e higiene, garantindo a segurança alimentar desde a origem até ao produto final. Através de sistemas de rastreabilidade, cada etapa é registada, permitindo total controlo e transparência. Assim, asseguramos um produto fiável, com elevados padrões de qualidade, pronto para chegar ao consumidor com total segurança."
+                    }
+
+                    {item === "aves" &&
+                      "Na produção de aves, a Divina Carne segue práticas exigentes que garantem qualidade, segurança e respeito pelo bem-estar animal. As condições de criação são cuidadosamente controladas, promovendo um ambiente saudável e adequado. Todo o processo produtivo é acompanhado por sistemas rigorosos de controlo e rastreabilidade, assegurando que cada produto pode ser identificado desde a origem até ao consumidor final. Com foco na excelência e na segurança alimentar, entregamos produtos que refletem o nosso compromisso com qualidade, confiança e sustentabilidade."
+                    }
+                  </p>
+
+                </div>
+              )}
+
             </div>
 
-            {active === "bovino" && (
-              <div className="absolute inset-0 bg-white text-black p-10 overflow-auto">
-                
-                <h3 className="text-2xl font-bold mb-4">
-                  Bovinos
-                </h3>
-
-                <p className="mb-4">
-                  Loren ipsum dolor sit amet...
-                </p>
-
-                <div className="border p-4 rounded-lg">
-                  Espaço para tabela de cortes e fornecedores
-                </div>
-
-              </div>
-            )}
-
-          </div>
-
-          {/* SUÍNOS */}
-          <div
-            className={`relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ${
-              active === "suino" ? "col-span-3 h-[500px]" : "h-[320px]"
-            }`}
-          >
-
-            <img
-              src={suino}
-              alt="Suínos"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute inset-0 bg-black/40" />
-
-            <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-xl font-semibold mb-2">Suínos</h3>
-
-              <button
-                onClick={() =>
-                  setActive(active === "suino" ? null : "suino")
-                }
-                className="text-sm underline"
-              >
-                {active === "suino" ? "Fechar" : "Saiba mais"}
-              </button>
-            </div>
-
-            {active === "suino" && (
-              <div className="absolute inset-0 bg-white text-black p-10 overflow-auto">
-                
-                <h3 className="text-2xl font-bold mb-4">
-                  Suínos
-                </h3>
-
-                <p className="mb-4">
-                  Loren ipsum dolor sit amet...
-                </p>
-
-                <div className="border p-4 rounded-lg">
-                  Espaço para tabela de cortes e fornecedores
-                </div>
-
-              </div>
-            )}
-
-          </div>
-
-          {/* AVES */}
-          <div
-            className={`relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ${
-              active === "aves" ? "col-span-3 h-[500px]" : "h-[320px]"
-            }`}
-          >
-
-            <img
-              src={aves}
-              alt="Aves"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute inset-0 bg-black/40" />
-
-            <div className="absolute bottom-6 left-6 text-white">
-              <h3 className="text-xl font-semibold mb-2">Aves</h3>
-
-              <button
-                onClick={() =>
-                  setActive(active === "aves" ? null : "aves")
-                }
-                className="text-sm underline"
-              >
-                {active === "aves" ? "Fechar" : "Saiba mais"}
-              </button>
-            </div>
-
-            {active === "aves" && (
-              <div className="absolute inset-0 bg-white text-black p-10 overflow-auto">
-                
-                <h3 className="text-2xl font-bold mb-4">
-                  Aves
-                </h3>
-
-                <p className="mb-4">
-                  Loren ipsum dolor sit amet...
-                </p>
-
-                <div className="border p-4 rounded-lg">
-                  Espaço para tabela de cortes e fornecedores
-                </div>
-
-              </div>
-            )}
-
-          </div>
+          ))}
 
         </div>
 
