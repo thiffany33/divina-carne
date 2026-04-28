@@ -1,13 +1,24 @@
 import Navbar from "./components/Navbar";
 import Hero from "./sections/Hero";
 import Animals from "./sections/Animals";
+import About from "./sections/About";
+import Sig from "./sections/Sig";
+import Footer from "./sections/Footer";
+import Mvv from "./sections/Mvv";
+import Contact from "./sections/Contact";
+
 
 function App() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <Hero />
-      <Animals/>
+      <About />
+      <Mvv />
+      <Animals />
+      <Sig />
+      <Contact/>
+      <Footer />
     </>
   );
 }

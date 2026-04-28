@@ -1,10 +1,10 @@
-import logo from "../assets/Logo.png";
-import selo from "../assets/GreenQuality.png";
+import logo from "../assets/logos/Logo.png";
+import selo from "../assets/logos/GreenQuality.png";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="h-screen bg-white flex items-center px-8">
+    <section id="inicio" className="min-h-screen bg-white flex items-center px-8">
       
       <div className="max-w-7xl mx-auto w-full grid grid-cols-[1fr_1.5fr] gap-10 items-center">
 
@@ -57,14 +57,14 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            
-            <button className="bg-[#AA0106] text-white px-6 py-3 rounded-full font-medium hover:opacity-90 transition">
-              NOS CONHEÇA
-            </button>
-
-            <button className="border border-[#AA0106] text-[#AA0106] px-6 py-3 rounded-full font-medium hover:bg-[#AA0106] hover:text-white transition">
-              SISTEMA INTEGRADO DE GESTÃO (SIG)
-            </button>
+              <a
+                href="https://www.youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-[#AA0106] text-[#AA0106] px-6 py-3 rounded-full font-medium hover:bg-[#AA0106] hover:text-white transition"
+              >
+                NOS CONHEÇA
+              </a>
 
           </motion.div>
 
