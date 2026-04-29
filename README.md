@@ -2,7 +2,6 @@
 
 > Alimentando o mundo hoje. Preservando o amanhã.
 
----
 
 ## 🌐 Sobre o Projeto
 
@@ -16,7 +15,6 @@ O objetivo é representar, de forma prática, a aplicação de conceitos de:
 
 Através de uma experiência digital moderna e intuitiva.
 
----
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -26,7 +24,6 @@ Através de uma experiência digital moderna e intuitiva.
 - 🎬 Framer Motion  
 - 🌐 GitHub Pages (Deploy)
 
----
 
 ## 🧩 Estrutura do Projeto
 
@@ -39,7 +36,6 @@ O projeto foi desenvolvido com uma arquitetura baseada em componentes reutilizá
 - `Sig` → Sistema Integrado de Gestão  
 - `Footer` → Créditos e informações finais  
 
----
 
 ## 🔗 Funcionalidades
 
@@ -49,7 +45,6 @@ O projeto foi desenvolvido com uma arquitetura baseada em componentes reutilizá
 - Organização modular  
 - Integração com links externos (YouTube, documentos SIG)  
 
----
 
 ## ⚠️ Desafios Encontrados
 
@@ -59,7 +54,6 @@ Durante o desenvolvimento, alguns desafios técnicos foram enfrentados:
 - Problemas no carregamento de CSS após deploy  
 - Incompatibilidade com versão do Tailwind CSS  
 
----
 
 ## 🛠️ Soluções Aplicadas
 
@@ -68,7 +62,6 @@ Durante o desenvolvimento, alguns desafios técnicos foram enfrentados:
 - Estruturação adequada do build para produção  
 - Debug com análise de logs e comportamento do deploy  
 
----
 
 ## 🌍 Deploy
 
@@ -76,13 +69,11 @@ O projeto está disponível em:
 
 👉 https://thiffany33.github.io/divina-carne/
 
----
 
 ## 👩‍💻 Autora
 
 Desenvolvido por **Thiffany Gonçalves** 
 
----
 
 ## 📌 Nota
 
@@ -90,7 +81,6 @@ Este projeto é fictício e foi desenvolvido exclusivamente para fins académico
 Por não envolver dados reais ou sensíveis, não foi implementada uma abordagem aprofundada de segurança.  
 As vulnerabilidades identificadas pelo `npm audit` foram analisadas e consideradas de baixo impacto no contexto do projeto, uma vez que se trata de uma aplicação estática sem backend ou manipulação de dados de utilizador.
 
----
 
 ## 💬 Considerações Finais
 
