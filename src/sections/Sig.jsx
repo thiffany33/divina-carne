@@ -1,85 +1,96 @@
 export default function Sig() {
   return (
-    <section id="sig" className="bg-[#420D07] text-white px-8 py-20">
-      <div className="max-w-6xl mx-auto">
+    <section
+      id="sig"
+      className="bg-[#420D07] text-white px-8 py-20"
+    >
+      <div className="max-w-7xl mx-auto">
 
-        <h2 className="text-3xl font-bold mb-6">
+        <h2 className="text-4xl font-bold mb-12 text-center">
           Sistema Integrado de Gestão (SIG)
         </h2>
 
-        <p className="text-white-600 mb-10">
-          A Divina Carne implementa um Sistema Integrado de Gestão que garante qualidade,
-          segurança alimentar, sustentabilidade e responsabilidade social em todas as etapas.
-        </p>
+        <div className="grid md:grid-cols-2 gap-16 items-center">
 
-        <div className="grid grid-cols-3 gap-6">
+          {/* SIG PRINCIPAL */}
 
-          {/* SGA */}
           <a
-            href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgCFlaJXB2HxRKVJWju5vqwbARNsTkSHiVUVA2H5SYhNjnA?e=5ZcRHy"
+            href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgDb-4nJAaCHTLJQU738aHBvAZpkd4kLeiww-fuvqguDz9M?e=BoGbTd"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-6 border rounded-xl hover:shadow transition block"
+            className="
+              p-6 border rounded-xl hover:shadow transition block
+              rounded-lg
+              min-h-[450px]
+              flex items-center justify-center
+              hover:bg-white
+              hover:text-[#420D07]
+              transition duration-300
+            "
           >
-            <h3 className="font-semibold mb-2">SGA</h3>
-            <p className="text-sm text-white-600">
-              Sistema de Gestão Ambiental.
-            </p>
+            <div className="text-center">
+              <h3 className="text-7xl font-bold leading-tight">
+                Sistema
+                <br />
+                Integrado
+              </h3>
+
+              <p className="mt-6 text-2xl">
+                Clique para aceder ao SIG
+              </p>
+            </div>
           </a>
 
-          {/* SGQ */}
-          <a
-            href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgDUt4NSpQCuQb4puMr1dHApAWOM3ubwAbbeC221ZUhO5ts?e=KZVbPE"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 border rounded-xl hover:shadow transition block"
-          >
-            <h3 className="font-semibold mb-2">SGQ</h3>
-            <p className="text-sm text-white-600">
-              Sistema de Gestão da Qualidade.
-            </p>
-          </a>
+          {/* SUBSISTEMAS */}
 
-          {/* SGSST */}
-          <a
-            href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgCUpVFnwvPzQ7PgDha9gTgbAQ-qmXKcwWBQKJJXvVes3zs?e=drn9Ra"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 border rounded-xl hover:shadow transition block"
-          >
-            <h3 className="font-semibold mb-2">SGSST</h3>
-            <p className="text-sm text-white-600">
-              Segurança e Saúde no Trabalho.
-            </p>
-          </a>
+          <div className="flex flex-col gap-6">
 
-          {/* SGSA */}
-          <a
-            href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgARFxeNJU9aT6Q9RCjUiAXfAY0SHPIDWrpi9UlLxl_VEY8?e=FDt0gF"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 border rounded-xl hover:shadow transition block"
-          >
-            <h3 className="font-semibold mb-2">SGSA</h3>
-            <p className="text-sm text-white-600">
-              Segurança Alimentar.
-            </p>
-          </a>
+            <a
+              href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgCFlaJXB2HxRKVJWju5vqwbASdgd8JBC1P8RSiShsjH67g?e=rOiZc5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 border rounded-xl hover:shadow transition block"
+            >
+              Sistema de Gestão Ambiental (SGA)
+            </a>
 
-          {/* CÓDIGO DE ÉTICA */}
-          <a
-            href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgBZILl2Y_7PSZXW_fR0KqNPAduACeA9U2PJ_wc_pn4QUb0?e=iR55vh"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="p-6 border rounded-xl hover:shadow transition block"
-          >
-            <h3 className="font-semibold mb-2">
-              Código de Ética e Responsabilidade Social
-            </h3>
-            <p className="text-sm text-white-600">
-              Compromisso com ética, transparência e sustentabilidade.
-            </p>
-          </a>
+            <a
+              href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgDUt4NSpQCuQb4puMr1dHApAb29iou0Fcq7DVOgQKo6Vw8?e=Go59Ij"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 border rounded-xl hover:shadow transition block"
+            >
+              Sistema de Gestão de Qualidade (SGQ)
+            </a>
+
+            <a
+              href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgARFxeNJU9aT6Q9RCjUiAXfAfh5lXki-iRCC2c49ptxCPo?e=ZcGpMa"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 border rounded-xl hover:shadow transition block"
+            >
+              Sistema de Gestão de Segurança Alimentar (SGSA)
+            </a>
+
+            <a
+              href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgARFxeNJU9aT6Q9RCjUiAXfAfh5lXki-iRCC2c49ptxCPo?e=XLFo9K"
+              target="_blank"
+              rel="noopener noreferrer"
+             className="p-6 border rounded-xl hover:shadow transition block"
+            >
+              Sistema de Gestão de Saúde e Segurança no Trabalho (SGSST)
+            </a>
+
+            <a
+              href="https://formacaoiefp-my.sharepoint.com/:f:/g/personal/7704479_formacao_iefp_pt/IgBZILl2Y_7PSZXW_fR0KqNPAbVWg4CYYWeqEtgb-OHSdDA?e=GLISSR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-6 border rounded-xl hover:shadow transition block"
+            >
+              Responsabilidade Social
+            </a>
+
+          </div>
 
         </div>
 
